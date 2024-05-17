@@ -16,7 +16,7 @@ El script `rename_interfaces_to_eth.sh` renombra todas las interfaces de red no 
 
 1. Clona el repositorio:
     ```sh
-    git clone https://github.com/tu-usuario/scripts.git
+    git clone https://github.com/manegron/scripts.git
     cd scripts
     ```
 
