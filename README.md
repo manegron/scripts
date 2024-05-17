@@ -46,5 +46,5 @@ El script `rename_interfaces_to_eth.sh` renombra todas las interfaces de red no 
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más información.
+Este proyecto está licenciado bajo la Licencia GPL-3.0. Consulta el archivo [LICENSE](LICENSE) para obtener más información.
 
