@@ -7,7 +7,7 @@ counter=0
 interfaces=$(ls /sys/class/net | grep -v lo)
 
 # Crear reglas persistentes para renombrar las interfaces
-udev_rules_file="/etc/udev/rules.d/70-persistent-net.rules"
+udev_rules_file="/etc/udev/rules.d/10-persistent-net.rules"
 
 # Limpiar el archivo de reglas si ya existe
 echo "" > $udev_rules_file
@@ -16,12 +16,12 @@ for interface in $interfaces; do
     # Obtener la dirección MAC de la interfaz
     mac_address=$(cat /sys/class/net/$interface/address)
     
-    # Incrementar el contador
-    ((counter++))
-    
     # Nuevo nombre de la interfaz
     new_name="eth$counter"
     
+    # Incrementar el contador
+    ((counter++))
+
     # Crear la regla udev para renombrar la interfaz
     echo "SUBSYSTEM==\"net\", ACTION==\"add\", ATTR{address}==\"$mac_address\", NAME=\"$new_name\"" >> $udev_rules_file
 
